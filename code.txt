@@ -1,0 +1,181 @@
+
+Arnav@Arny MINGW64 ~ (master)
+$ cd d:
+
+Arnav@Arny MINGW64 /d
+$ cd webdev
+
+Arnav@Arny MINGW64 /d/webdev
+$ cd git
+
+Arnav@Arny MINGW64 /d/webdev/git
+$ git init
+Initialized empty Git repository in D:/webdev/git/.git/
+
+Arnav@Arny MINGW64 /d/webdev/git (master)
+$ ls -a
+./  ../  .chapter1.txt.swp  .git/  chapter1.txt
+
+Arnav@Arny MINGW64 /d/webdev/git (master)
+$ git status
+On branch master
+
+No commits yet  
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .chapter1.txt.swp
+        chapter1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Arnav@Arny MINGW64 /d/webdev/git (master)
+$ git add chapter1.txt
+
+Arnav@Arny MINGW64 /d/webdev/git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   chapter1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .chapter1.txt.swp
+
+
+Arnav@Arny MINGW64 /d/webdev/git (master)
+$ git commit -m "completed chapter1"
+[master (root-commit) 90a46a1] completed chapter1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 chapter1.txt
+
+Arnav@Arny MINGW64 /d/webdev/git (master)
+$ git log
+commit 90a46a14719f989317b16177051ead222d910ac5 (HEAD -> master)
+Author: Arnav <43823893+arnav1307@users.noreply.github.com>
+Date:   Mon Mar 1 19:18:07 2021 +0530
+
+    completed chapter1
+
+Arnav@Arny MINGW64 /d/webdev/git (master)
+$ touch chapter2.txt
+
+Arnav@Arny MINGW64 /d/webdev/git (master)
+$ touch chapter 3.txt
+
+Arnav@Arny MINGW64 /d/webdev/git (master)
+$ touch chapter3.txt
+
+Arnav@Arny MINGW64 /d/webdev/git (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .chapter1.txt.swp
+        chapter
+        chapter2.txt
+        chapter3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Arnav@Arny MINGW64 /d/webdev/git (master)
+$ git add .
+
+Arnav@Arny MINGW64 /d/webdev/git (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .chapter1.txt.swp
+        new file:   chapter
+        new file:   chapter2.txt
+        new file:   chapter3.txt
+
+
+Arnav@Arny MINGW64 /d/webdev/git (master)
+$ git commit -m "completed chapter 2 and 3"
+[master 7ffdab8] completed chapter 2 and 3
+ 4 files changed, 2 insertions(+)
+ create mode 100644 .chapter1.txt.swp
+ create mode 100644 chapter
+ create mode 100644 chapter2.txt
+ create mode 100644 chapter3.txt
+
+Arnav@Arny MINGW64 /d/webdev/git (master)
+$ git log
+commit 7ffdab8beaa17a4717b12ae746b72430d6c1fc25 (HEAD -> master)
+Author: Arnav <43823893+arnav1307@users.noreply.github.com>
+Date:   Mon Mar 1 19:21:39 2021 +0530
+
+    completed chapter 2 and 3
+
+commit 90a46a14719f989317b16177051ead222d910ac5
+Author: Arnav <43823893+arnav1307@users.noreply.github.com>
+Date:   Mon Mar 1 19:18:07 2021 +0530
+
+    completed chapter1
+
+Arnav@Arny MINGW64 /d/webdev/git (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   chapter3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Arnav@Arny MINGW64 /d/webdev/git (master)
+$ git diff chapter3.txt
+diff --git a/chapter3.txt b/chapter3.txt
+index 29dadbd..fe27f0e 100644
+--- a/chapter3.txt
++++ b/chapter3.txt
+@@ -1 +1 @@
+-wassup dog
+\ No newline at end of file
++disrupted file due to some issue
+\ No newline at end of file
+
+Arnav@Arny MINGW64 /d/webdev/git (master)
+$ git checkout chapter3.txt
+Updated 1 path from the index
+
+Arnav@Arny MINGW64 /d/webdev/git (master)
+$ git remote add origin https://github.com/arnav1307/git-trial.git
+
+Arnav@Arny MINGW64 /d/webdev/git (master)
+$ git push -u origin master
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/arnav1307/git-trial.git/'
+
+Arnav@Arny MINGW64 /d/webdev/git (master)
+$ git push -u origin master
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (9/9), 875 bytes | 97.00 KiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0)
+To https://github.com/arnav1307/git-trial.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Arnav@Arny MINGW64 /d/webdev/git (master)
+$
+
+Arnav@Arny MINGW64 /d/webdev/git (master)
+$ touch code
+
+Arnav@Arny MINGW64 /d/webdev/git (master)
+$ touch code.txt
+
+Arnav@Arny MINGW64 /d/webdev/git (master)
+$ copyOnSelect
+bash: copyOnSelect: command not found
+
+Arnav@Arny
